@@ -30,8 +30,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install system dependencies (Chromium for Karma)
-        run: sudo apt-get update && sudo apt-get install -y chromium-browser || true
+      - name: Install system dependencies (Google Chrome for Karma)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gnupg2 ca-certificates fonts-liberation libasound2 libatk1.0-0 libatk-bridge2.0-0 libcups2 libxss1 libx11-xcb1 libxcb1 libxcomposite1 libxrandr2 libgbm1 libgtk-3-0 libnss3 libxcb-dri3-0
+          # Add Google Chrome apt repository
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+        env:
+          DEBIAN_FRONTEND: noninteractive
 
       - name: Install dependencies (frontend)
         run: |
@@ -45,7 +54,9 @@ jobs:
 
       - name: Run tests (frontend)
         env:
-          CHROME_BIN: /usr/bin/chromium-browser
+          CHROME_BIN: /usr/bin/google-chrome-stable
+          CI: true
         run: |
           cd backend/frontend/my-angular-app
-          npm test --if-present -- --watch=false --browsers=ChromeHeadless
+          # Use ChromeHeadless with no-sandbox flags to run inside CI
+          npm test --if-present -- --watch=false --browsers=ChromeHeadless --no-sandbox --disable-gpu || npm test --if-present -- --watch=false --browsers=ChromeHeadless -- --no-sandbox --disable-gpu
