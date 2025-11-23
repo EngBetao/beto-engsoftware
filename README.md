@@ -1,61 +1,59 @@
-# beto-engsoftware
+# MyAngularApp
 
-Breve README para rodar o frontend Angular (inclui suporte SSR).
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
 
-## Requisitos
+## Development server
 
-- Node.js >= 18
-- npm (versão compatível com Node)
-
-## Principais pastas
-
-- `backend/frontend/my-angular-app/` — app Angular principal (SSR-capable)
-
-## Comandos úteis (no diretório raiz do repositório)
-
-### Desenvolvimento (hot-reload)
+To start a local development server, run:
 
 ```bash
-cd backend/frontend/my-angular-app
-npm install
-npm run dev    # ou `npm start` (inicia ng serve)
+ng serve
 ```
 
-### Build e executar SSR (produção local)
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
-cd backend/frontend/my-angular-app
-npm install
-npm run build
-npm run serve:ssr:my-angular-app
+ng generate component component-name
 ```
 
-### Comandos de teste
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
 ```bash
-cd backend/frontend/my-angular-app
-npm test
+ng generate --help
 ```
 
-## Notas importantes
+## Building
 
-- O SSR gera um `server.mjs` ESM que usa `import.meta.dirname`. Use Node 18+.
-- O servidor Express que serve a pasta `dist/my-angular-app/browser` está em `src/server.ts` e exporta `reqHandler`.
-- Para alterar comportamento de SSR prefira editar `src/app/app.config.server.ts` e `src/app/app.routes.server.ts`.
-- Há um arquivo de instruções para agentes AI: `.github/copilot-instructions.md` — consulte para padrões do projeto.
-
-## Git / deploy
-
-- Para enviar alterações ao GitHub (exemplo):
+To build the project run:
 
 ```bash
-git add .
-git commit -m "chore: descricao"
-git push origin master
+ng build
 ```
 
-Se houver autenticação HTTPS, use seu username e um Personal Access Token (PAT) como senha.
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Contato
+## Running unit tests
 
-- Se precisar, eu posso adicionar um `README` mais detalhado (deploy, CI, Docker, etc.).
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

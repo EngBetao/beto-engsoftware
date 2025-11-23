@@ -55,6 +55,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "allowedHosts": [
+              "4200-imsb5y5981wpiskps604b-4599730c.manusvm.computer"
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
