@@ -1,59 +1,50 @@
-# MyAngularApp
+# 🅰️ MyAngularApp - Aplicação Angular Profissional
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+Uma aplicação web moderna desenvolvida com **Angular 20** e **TypeScript**, demonstrando boas práticas de desenvolvimento frontend com arquitetura escalável e componentes reutilizáveis.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-20.3-DD0031?style=flat-square&logo=angular )
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript )
+![RxJS](https://img.shields.io/badge/RxJS-7.0-B7178C?style=flat-square&logo=reactivex )
+![CSS3](https://img.shields.io/badge/CSS3-Moderno-1572B6?style=flat-square&logo=css3 )
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square )
 
-To start a local development server, run:
+## 📋 Sobre o Projeto
 
-```bash
-ng serve
-```
+MyAngularApp é uma aplicação web robusta desenvolvida com Angular, demonstrando:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Arquitetura Modular** - Componentes bem organizados e reutilizáveis
+- **TypeScript** - Tipagem forte e segurança de tipos
+- **RxJS** - Programação reativa com Observables
+- **Routing** - Navegação entre múltiplas páginas
+- **Serviços** - Lógica de negócio centralizada
+- **Formulários** - Validação e tratamento de dados
+- **HTTP Client** - Integração com APIs backend
+- **Testes** - Testes unitários com Karma
 
-## Code scaffolding
+## 🚀 Tecnologias Utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Frontend
+- **Angular 20** - Framework web completo
+- **TypeScript** - Linguagem tipada para JavaScript
+- **RxJS** - Programação reativa
+- **Angular CLI** - Ferramentas de desenvolvimento
+- **Karma** - Test runner para testes unitários
 
-```bash
-ng generate component component-name
-```
+### Ferramentas
+- **Git/GitHub** - Versionamento de código
+- **npm** - Gerenciador de pacotes
+- **Angular DevTools** - Debugging e profiling
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Instalação
 
-```bash
-ng generate --help
-```
+### Pré-requisitos
+- Node.js 18+ instalado
+- npm ou yarn
+- Angular CLI 20+
 
-## Building
+### Passos
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/EngBetao/beto-engsoftware.git
+   cd beto-engsoftware
