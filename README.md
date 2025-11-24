@@ -47,4 +47,58 @@ MyAngularApp é uma aplicação web robusta desenvolvida com Angular, demonstran
 1. **Clone o repositório**
    ```bash
    git clone https://github.com/EngBetao/beto-engsoftware.git
-   cd beto-engsoftware
+ npm install
+  cd beto-engsoftware
+ng serve
+http://localhost:4200
+beto-engsoftware/
+├── src/
+│   ├── app/
+│   │   ├── components/      # Componentes reutilizáveis
+│   │   ├── pages/          # Páginas da aplicação
+│   │   ├── services/       # Serviços e lógica
+│   │   ├── models/         # Interfaces e tipos
+│   │   ├── guards/         # Route guards
+│   │   ├── interceptors/   # HTTP interceptors
+│   │   ├── app.component.ts    # Componente raiz
+│   │   └── app.routes.ts       # Rotas da aplicação
+│   ├── assets/             # Imagens e recursos
+│   ├── styles/             # Estilos globais
+│   ├── index.html          # Template HTML
+│   └── main.ts             # Ponto de entrada
+├── angular.json            # Configuração Angular
+├── tsconfig.json           # Configuração TypeScript
+├── karma.conf.js           # Configuração testes
+└── package.json            # Dependências
+# Inicia servidor de desenvolvimento
+ng serve
+
+# Build para produção
+ng build
+
+# Executa testes unitários
+ng test
+
+# Executa testes end-to-end
+ng e2e
+
+# Lint do código
+ng lint
+
+# Gera novo componente
+ng generate component nome-componente
+
+# Gera novo serviço
+ng generate service nome-servico
+# Executar todos os testes
+ng test
+
+# Executar com cobertura
+ng test --code-coverage
+
+# Executar um arquivo específico
+ng test --include='**/nome.spec.ts'
+# Executar testes end-to-end
+ng e2e
+# Executar testes end-to-end
+ng e2e
